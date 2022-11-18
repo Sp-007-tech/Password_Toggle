@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Toggle</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <input type="password" placeholder="password" id="password">
+
+        <span>
+            <i class="fa fa-eye" aria-hidden="true" id="eye" onclick="toggle()"></i>
+
+            </i>
+        </span>
+    </div>
+    <script>
+        var state=false;
+        function toggle(){
+            if(state){
+                document.getElementById("password").setAttribute("type","password");
+                document.getElementById("eye").style.color='#7a797e';
+                state=false;
+            }
+            else{
+                document.getElementById("password").setAttribute("type","text");
+                document.getElementById("eye").style.color='#5887ef';
+
+                state=true;
+
+            }
+        }
+    </script>
+</body>
+
+</html>
